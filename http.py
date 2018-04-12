@@ -1,5 +1,4 @@
-﻿from Tkinter import *
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer  
+﻿from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer  
 import io,shutil    
 import urllib  
 import os, sys
@@ -54,12 +53,6 @@ class MyRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()    
         shutil.copyfileobj(f,self.wfile)  
 Protocol     = "HTTP/1.0"
- 
-if sys.argv[1:]:
-    port = int(sys.argv[1])
-else:
-    port = 8000
-server_address = ('127.0.0.1', port)
 server = HTTPServer(('localhost', 8080), MyRequestHandler)
 print 'Starting server, use <Ctrl-C> to stop'
 server.serve_forever()

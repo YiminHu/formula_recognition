@@ -4,7 +4,12 @@ import cv2
 import base64
 import numpy as np
 import urllib
-imgpath = '/Users/MikeHu/desktop/1.jpg'
+import sys
+
+if sys.argv[1:]:
+    imgpath = sys.argv[1]
+else:
+    imgpath = './test/1.jpg'
 with open(imgpath,'rb') as fin:
     image_data = fin.read()
     base64data = base64.b64encode(image_data)
