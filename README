@@ -1,0 +1,7 @@
+识别题目中的公式的http服务
+接受参数：base64的图片和其OCR结果
+返回图片中所有识别到的公式的list
+运行方式：python http.py
+可以在localhost:8080启动服务(如需变化地址，修改server = HTTPServer(('localhost', 8080), MyRequestHandler)中的地址)
+测试：python request.py [imgpath] 
+测试图片在test目录下，例如：python request.py ./test/1.jpg
