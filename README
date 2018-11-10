@@ -3,3 +3,5 @@
 This project is based on python2 and based on internal service at NetEase, so it cannot noramlly run.
 
 The formula recognition part still works fine for recognize a single formula.
+
+The main algorithm is in recImg.py
